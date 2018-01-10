@@ -6,8 +6,8 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Eduardo Guzmán H.</title>
 
-        <link rel="manifest" href="/manifest.json">
-        <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
+        <link rel="manifest" href="{{ $page->asset_prefix }}/manifest.json">
+        <link rel="stylesheet" href="{{ $page->asset_prefix }}{{ mix('/css/app.css') }}">
     </head>
     <body class="font-sans font-normal leading-normal">
         @yield('body')

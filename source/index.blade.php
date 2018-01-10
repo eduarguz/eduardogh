@@ -78,7 +78,7 @@
         <h3 class="text-blue-darker uppercase text-sm mt-8 leading-loose tracking-wide font-semibold">Trabajo</h3>
         <div class="flex mt-5">
             <div class="w-1/2 pr-8">
-                <a class="hover:text-blue-dark" href="">
+                <a class="hover:text-blue-dark" href="https://www.4buyhub.com/">
                     <h4 class="text-3xl font-display">4BuyHub</h4>
                 </a>
                 <p class="my-4 leading-loose">
