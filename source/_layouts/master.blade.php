@@ -6,8 +6,8 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Eduardo Guzmán - Resume</title>
 
-        <link rel="manifest" href="{{ $page->asset_prefix }}/manifest.json">
-        <link rel="stylesheet" href="{{ $page->asset_prefix }}{{ mix('/css/app.css') }}">
+{{--        <link rel="manifest" href="{{ $page->asset_prefix }}{{ mix('manifest.json', 'assets/build') }}">--}}
+        <link rel="stylesheet" href="{{ $page->asset_prefix }}{{ mix('css/main.css', 'assets/build') }}">
 
         <meta name="description" content="Know a little more about me, this is my resume.">
         <meta name="author" content="Eduardo Guzmán">
