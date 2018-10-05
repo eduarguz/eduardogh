@@ -1,36 +1,22 @@
-const argv = require('yargs').argv;
-const OnBuild = require('on-build-webpack')
-const Watch = require('webpack-watch')
-const command = require('node-cmd')
-const mix = require('laravel-mix');
 const tailwindcss = require('tailwindcss');
-const env = argv.e || argv.env || 'local'
+let mix = require('laravel-mix');
+let build = require('./tasks/build.js');
 
-const plugins = [
-    new OnBuild(() => {
-        command.get('./vendor/bin/jigsaw build ' + env, (error, stdout, stderr) => {
-            if (error) {
-                console.log(stderr)
-                process.exit(1)
-            }
-            console.log(stdout)
-        })
-    }),
-    new Watch({
-        paths: ['source/**/*.md', 'source/**/*.php'],
-        options: {ignoreInitial: true}
-    }),
-]
+mix.disableSuccessNotifications();
+mix.setPublicPath('source/assets/build');
+mix.webpackConfig({
+  plugins: [
+    build.jigsaw,
+    build.browserSync(),
+    build.watch(['source/**/*.md', 'source/**/*.php', 'source/**/*.scss', '!source/**/_tmp/*']),
+  ]
+});
 
-mix.webpackConfig({plugins})
-mix.setPublicPath('source')
-
-mix
-    .js('source/_assets/js/app.js', 'source/js')
-    .less('source/_assets/less/app.less', 'source/css')
-    .options({
-        postCss: [
-            tailwindcss('tailwind.js'),
-        ]
-    })
-    .version()
+mix.js('source/_assets/js/main.js', 'js')
+  .less('source/_assets/less/main.less', 'css')
+  .options({
+    processCssUrls: false,
+    postCss: [
+      tailwindcss('tailwind.js'),
+    ]
+  }).version();
