@@ -9,13 +9,17 @@
         <div class="flex">
             <div class="w-1/2 pr-8">
                 <p class="my-4 leading-loose">
-                    Me motiva explorar y conocer nuevas tecnologias, transformar ese conocimiento en productos y servicios que generan impacto sobre la gente, las comunidades y los negocios.
+                    Me motiva explorar y conocer nuevas tecnologías, transformar ese conocimiento en productos y servicios
+                    que generan impacto sobre la gente, las comunidades y los negocios.
                 </p>
                 <p class="my-4 leading-loose">
-                    Durante mi formación como Ingeniero Electrónico he adquirido conocimientos, habilidades y destrezas que me motivan a participar en cualquier entorno profesional, social y cultural.
+                    Durante mi formación como Ingeniero Electrónico he adquirido conocimientos, habilidades y destrezas
+                    que me motivan a participar en cualquier entorno profesional, social y cultural.
                 </p>
                 <p class="my-4 leading-loose">
-                    Considerado una persona con gran capacidad para la creación de ideas y la iniciativa para resolver problemas. Mi trabajo se ha centrado en la construcción de plataformas para grupos emprendedores, productos y servicios que pretenden impactar y generar alternativas para sus usuarios.
+                    Considerado una persona con gran capacidad para la creación de ideas y la iniciativa para resolver problemas.
+                    Mi trabajo se ha centrado en la construcción de plataformas web que ofrecen servicios y soportan otros.
+                    Estos, pretenden impactar y generar experiencias de gran calidad para sus usuarios.
                 </p>
             </div>
             <div class="w-1/2 pl-8">
@@ -56,16 +60,19 @@
 
                 <ul class="list-reset mt-5">
                     <li class="mb-5">
-                        <p class="my-1 font-semibold">PHP - Laravel Framework</p>
+                        <p class="my-1">
+                            <span class="font-semibold">PHP</span> <span class="text-sm">Laravel</span>
+                        </p>
                     </li>
                     <li class="mb-5">
-                        <p class="my-1 font-semibold">Responsive Design</p>
+                        <p class="my-1">
+                            <span class="font-semibold">Javascript</span> <span class="text-sm">Vue.js</span>
+                        </p>
                     </li>
                     <li class="mb-5">
-                        <p class="my-1 font-semibold">Javascript - Vue.js Framework</p>
-                    </li>
-                    <li class="mb-5">
-                        <p class="my-1 font-semibold">Css/Sass/Less</p>
+                        <p class="my-1">
+                            <span class="font-semibold">Css/Sass/Less</span> <span class="text-sm">Tailwind Css</span>
+                        </p>
                     </li>
                 </ul>
             </div>
@@ -83,11 +90,29 @@
                 </a>
                 <p class="my-4 leading-loose">
                     Desarrollé de extremo a extremo, el minimo producto viable de un emprendimiento web.
-                    <br>Inicialmente participando en el diseño del producto y modelando la lógica del negocio. Posteriormente, construyendo la solución e implementando los features requeridos. Y finalmente, realizando el despliegue y mantenimiendo del producto.
+                    <br>Inicialmente participando en el diseño del producto y modelando la lógica del negocio.
+                    Posteriormente, construyendo la solución e implementando los features requeridos.
+                    Y finalmente, realizando el despliegue y mantenimiendo inicial del producto.
+                </p>
+            </div>
+            <div class="w-1/2 relative">
+                @include('svg.sitting', ['class' => 'w-64 absolute pin-r pin-b'])
+            </div>
+        </div>
+
+        <div class="flex mt-8">
+            <div class="w-2/3 pr-8">
+                <a class="hover:text-green-light" href="https://www.placetopay.com/" target="_blank">
+                    <h4 class="text-3xl font-display">PlacetoPay</h4>
+                </a>
+                <p class="my-4 leading-loose">
+                    He participado en proyectos que soportarían las transacciones realizadas en PlacetoPay,
+                    haciéndolas más seguras con el uso con protocolos como <i>3D Secure</i> y
+                    expandiendo las posibilidades que usuarios y negocios conectados a la red pueden aprovechar,
+                    como lo es la integración directa con el <i>GDS Sabre</i> para facilitarle el proceso clientes y agencias de viaje.
                 </p>
             </div>
         </div>
-        @include('svg.sitting', ['class' => 'w-64 absolute pin-r pin-b'])
     </div>
 
     <div class="container m-auto max-w-lg p-4 my-16 relative">
