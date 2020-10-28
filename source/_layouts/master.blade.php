@@ -6,7 +6,6 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Eduardo Guzmán - Resume</title>
 
-{{--        <link rel="manifest" href="{{ $page->asset_prefix }}{{ mix('manifest.json', 'assets/build') }}">--}}
         <link rel="stylesheet" href="{{ $page->asset_prefix }}{{ mix('css/main.css', 'assets/build') }}">
         <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;600&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
