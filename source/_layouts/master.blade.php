@@ -8,6 +8,8 @@
 
 {{--        <link rel="manifest" href="{{ $page->asset_prefix }}{{ mix('manifest.json', 'assets/build') }}">--}}
         <link rel="stylesheet" href="{{ $page->asset_prefix }}{{ mix('css/main.css', 'assets/build') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
 
         <meta name="description" content="Know a little more about me, this is my resume.">
         <meta name="author" content="Eduardo Guzmán">
@@ -20,7 +22,7 @@
         <meta property="twitter:card" content="Know a little more about me, this is my resume. Eduardo Guzmán.">
         <meta property="twitter:description" content="Know a little more about me, this is my resume. Eduardo Guzmán.">
     </head>
-    <body class="font-sans font-normal leading-normal">
+    <body class="font-sans font-normal leading-normal text-gray-800">
         @yield('body')
     </body>
 </html>

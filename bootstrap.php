@@ -1,31 +1,17 @@
 <?php
 
+use TightenCo\Jigsaw\Jigsaw;
+
 /** @var $container \Illuminate\Container\Container */
+/** @var $events \TightenCo\Jigsaw\Events\EventBus */
 
-use Illuminate\Support\HtmlString;
-use Illuminate\Support\Str;
-
-/** @var $jigsaw \TightenCo\Jigsaw\Jigsaw */
-
-function mix($path, $manifestDirectory = '')
-{
-    static $manifests = [];
-    if (! Str::startsWith($path, '/')) {
-        $path = "/{$path}";
-    }
-    if ($manifestDirectory && ! Str::startsWith($manifestDirectory, '/')) {
-        $manifestDirectory = "/{$manifestDirectory}";
-    }
-    $manifestPath = public_path($manifestDirectory.'/mix-manifest.json');
-    if (! isset($manifests[$manifestPath])) {
-        if (! file_exists($manifestPath)) {
-            throw new Exception('The Mix manifest does not exist.');
-        }
-        $manifests[$manifestPath] = json_decode(file_get_contents($manifestPath), true);
-    }
-    $manifest = $manifests[$manifestPath];
-    if (! isset($manifest[$path])) {
-        throw new InvalidArgumentException("Unable to locate Mix file: {$path}.");
-    }
-    return new HtmlString($manifestDirectory.$manifest[$path]);
-}
+/**
+ * You can run custom code at different stages of the build process by
+ * listening to the 'beforeBuild', 'afterCollections', and 'afterBuild' events.
+ *
+ * For example:
+ *
+ * $events->beforeBuild(function (Jigsaw $jigsaw) {
+ *     // Your code here
+ * });
+ */
